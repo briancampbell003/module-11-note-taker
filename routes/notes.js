@@ -4,7 +4,10 @@ const fs = require('fs');
 
 // GET Route for retrieving all the notes
 notes.get('/', (req, res) =>
-  fs.readFileSync('../db/db.json').then((data) => res.json(JSON.parse(data)))
+  fs.readFile('./db/db.json', (err, data) => {
+    if (err) throw err;
+    res.json(JSON.parse(data));
+  })
 );
 
 // POST Route for submitting feedback
@@ -21,9 +24,29 @@ notes.post('/', (req, res) => {
       noteId: uuidv4(),
     };
 
-    fs.appendFile(newNote, )
-    readAndAppend(newNote, '../db/db.json');
-
+    // let oldNotes = require("../db/db.json");
+    // oldNotes.push(newNote);
+    // const oldNotesString = JSON.stringify(oldNotes, null, 4);
+    
+    fs.readFile('./db/db.json', (err, data) => {
+      if (err) throw err;
+      let oldNotes = JSON.parse(data);
+      oldNotes.push(newNote);
+      const oldNotesString = JSON.stringify(oldNotes, null, 4);
+      updatedNotes(oldNotesString);
+    })
+    
+    function updatedNotes(oldNotesString) {
+      fs.writeFile('./db/db.json', oldNotesString, (err) => {
+        if (err) {
+          console.log(err);
+        }
+        else {
+          console.log('\nFile Contents of file after append:',
+            fs.readFileSync('./db/db.json', 'utf8'));
+        }
+      });
+    }
     const response = {
       status: 'success',
       body: newNote,
@@ -35,4 +58,4 @@ notes.post('/', (req, res) => {
   }
 });
 
-module.exports = fb;
+module.exports = notes;
