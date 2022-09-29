@@ -2,28 +2,5 @@
     {
         "title": "Test Title",
         "text": "Test text"
-    },
-    "{\"title\":\"Test2222222 Title\",\"text\":\"Test22222text\",\"noteId\":\"a89fb8ea-2214-40f4-8885-eb2b0d3894c1\"}",
-    "{\"title\":\"make a note\",\"text\":\"ok cool\",\"noteId\":\"5c391beb-8e84-4b53-9811-2d7ed113ce3e\"}",
-    "{\"title\":\"another note\",\"text\":\"here\\n\",\"noteId\":\"bc1db183-78e2-454d-8993-0fbad8d69b77\"}",
-    {
-        "title": "Test222fdas2222 Title",
-        "text": "Test22asdf222text",
-        "noteId": "b0184dbc-830e-49a8-9f7e-a9dc2374af33"
-    },
-    {
-        "title": "testme ",
-        "text": "just do it\n",
-        "noteId": "14cfadc1-38da-4275-96b6-60d3d33e5960"
-    },
-    {
-        "title": "just test asdfcity",
-        "text": "weeasfgadfsgasdfgeeeee",
-        "noteId": "2ec2e9b6-e3ee-4430-b1ca-b9ce1dd6176e"
-    },
-    {
-        "title": "okaaayy",
-        "text": "cool guy 23",
-        "noteId": "c2b766c9-de7a-4bd0-ad4d-014d139f2cbd"
     }
 ]

@@ -21,7 +21,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title: title,
       text: text,
-      noteId: uuidv4(),
+      id: uuidv4(),
     };
 
     // let oldNotes = require("../db/db.json");
